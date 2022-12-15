@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>Programa - Calcular tabla de multiplicar</h1>
+
+  <script>
+
+    let multiplicador = 1;
+
+    function saltarLinea() {
+      document.write("<br/>")
+    }
+
+    function imprimir(frase) {
+      document.write(frase);
+      saltarLinea();
+    }
+
+    imprimir("MULTIPLICACIÓN CON WHILE");
+    while (multiplicador <= 10) {
+      imprimir(5 * multiplicador);
+      multiplicador++;
+    }
+
+    imprimir("MULTIPLICACIÓN CON FOR");
+    for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+      imprimir(5 * multiplicador);
+    }
+
+  </script>
+
+</body>
+</html>

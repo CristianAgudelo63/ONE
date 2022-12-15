@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>Programa - Inicio de sesión</h1>
+
+  <script>
+
+    var contrasena = 1234;
+    var contrasenaRegistrada;
+    var intentos = 3;
+
+    for (let i = 0; i < intentos; i++) {
+
+      contrasenaRegistrada = prompt("Ingrese la contraseña")
+      
+      if (contrasena == contrasenaRegistrada) {
+        document.write("Ingreso a sesión");
+        break;
+      } else{
+        document.write("No pudo ingresar a la sesión")
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

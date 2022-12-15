@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Programa - Juego de adivinación</h1>
+  
+  <script>
+
+    /*
+      La función Math.round(), redondea un número.
+      La función Math.random(), genera un número aleatorio.
+    */
+    var numeroPensado = Math.round(Math.random()*10);
+    var intentos = 3;
+    var contador = 1;
+
+    while (contador <= intentos) {
+
+      let numeroLanzado = parseInt(prompt("Ingrese un número del 1 al 10"));
+      
+      if (numeroPensado == numeroLanzado) {
+        alert(`¡Acertó!, el número pensado es: ${numeroPensado}`);
+
+        /* El break, rompe un bucle cuando la condición se cumple
+         y continua con el código
+        */
+
+        break;
+      } else {
+        alert(`¡Erró!, intente nuevamente`)
+      }
+
+      contador++;
+    }
+
+    document.write(`El número pensado era: ${numeroPensado}`)
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interación con el usuario</title>
+</head>
+<body>
+
+  <h1>PROGRAMA CALCULAR IMC</h1>
+
+  <script>
+
+    let nombre = prompt("Ingrese su nombre")
+    let peso = prompt("Ingrese el peso en kg");
+    let altura = prompt("Ingrese la altura metros");
+    let imcCalculado = calcularIMC(peso,altura);
+
+    function saltarLinea() {
+      document.write("<br/>")
+    }
+
+    function imprimir(frase) {
+      document.write(frase);
+      saltarLinea();
+    }
+
+    function calcularIMC(peso, altura) {
+      return (peso / (altura * altura))
+    }
+
+    if(imcCalculado <= 18.5){
+      imprimir(`El IMC de <b>${nombre}</b> es: <b>BAJO</b>`);
+    }
+
+    if(imcCalculado >= 18.5 && imcCalculado <= 24.9){
+      imprimir(`El IMC de <b>${nombre}</b> es: <b>NORMAL</b>`);
+    }
+
+    if(imcCalculado >= 25 && imcCalculado <= 29.9){
+      imprimir(`El IMC de <b>${nombre}</b> es: <b>PRE-OBESIDAD</b>`);
+    } 
+
+    if(imcCalculado >= 30){
+      imprimir(`El IMC de <b>${nombre}</b> es: <b>OBESIDAD</b>`);
+    }
+
+    imprimir(`El puntaje IMC de <b>${nombre}</b> es de: <b>${imcCalculado.toFixed(1)}</b>`)
+
+  </script>
+</body>
+</html>

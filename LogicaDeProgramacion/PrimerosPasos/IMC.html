@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interación con el usuario</title>
+</head>
+<body>
+
+  <h1>PROGRAMA CALCULAR IMC</h1>
+
+  <script>
+
+    let nombre = prompt("Ingrese su nombre")
+    let peso = prompt("Ingrese el peso");
+    let altura = prompt("Ingrese la altura");
+    let imcCalculado = calcularIMC(peso,altura);
+
+    function saltarLinea() {
+      document.write("<br/>")
+    }
+
+    function imprimir(frase) {
+      document.write(frase);
+      saltarLinea();
+    }
+
+    function calcularIMC(peso, altura) {
+      return (peso / (altura * altura))
+    }
+
+    imprimir(`El IMC de ${nombre} es de: ${imcCalculado.toFixed(1)}`)
+
+  </script>
+</body>
+</html>

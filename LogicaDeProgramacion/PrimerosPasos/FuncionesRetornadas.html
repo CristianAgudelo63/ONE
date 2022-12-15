@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones Retornadas</title>
+</head>
+<body>
+
+  <h1>PROGRAMA CALCULAR IMC</h1>
+
+  <script>
+
+    let Cristian = calcularIMC(80, 1.70);
+    let Felipe = calcularIMC(60, 1.50);
+    let resultado = parseFloat(Cristian+Felipe)/2;
+
+    function saltarLinea() {
+      document.write("<br/>")
+      document.write("<br/>")
+      document.write("<br/>")
+    }
+
+    function imprimir(frase) {
+      document.write(frase);
+      saltarLinea();
+    }
+
+    function calcularIMC(peso, altura) {
+      return (peso / (altura * altura))
+    }
+
+    imprimir(`El promedio del IMC de Cristian y Felipe es de: ${resultado.toFixed(3)}`)
+
+  </script>
+</body>
+</html>

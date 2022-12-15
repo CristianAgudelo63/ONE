@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eficiencia</title>
+</head>
+<body>
+  <h3>¿Alcohol o gasolina?</h3>
+
+  <script>
+
+    const CapacidadTanque = 40;
+
+    /*
+      Si por 40 L de gasolina, recorre 480 km
+      cuantos L necesita por cada km
+
+      Aplicar regla de tres
+
+      40L   480km
+      -- * ----
+      xL    1km
+
+      40L * 1km
+      --------- = 0.083 L gasolina
+       480 km
+    */
+
+    let distanciaGasolina = 480;
+    let eficienciaGasolina = Math.round(CapacidadTanque * 1)/distanciaGasolina;
+    let ResultadoGasolina = parseFloat(eficienciaGasolina);
+
+    document.write(`La eficiencia con gasolina es: ${ResultadoGasolina.toFixed(3)} litros/kilometro`)
+    document.write("<br/>");
+
+    /*
+      Si por 40 L de alcohol, recorre 300km
+      cuantos L necesita por cada km
+
+      Aplicar regla de tres
+
+      40L  300km
+      -- * ---- 
+      xL    1km
+
+      40L* 1km
+      -------- = 0.133 L alcohol
+        300km
+    */
+
+    let distanciaAlcohol = 300;
+    let eficienciaAlcohol = (CapacidadTanque*1)/distanciaAlcohol;
+    const ResultadoAlcohol = parseFloat(eficienciaAlcohol);
+
+    document.write(`La eficiencia con alcohol es: ${ResultadoAlcohol.toFixed(3)} litros/kilometro`)
+
+  </script>
+</body>
+</html>

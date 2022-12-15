@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas width="600" height="400"></canvas>
+  <script>
+
+    const Pantalla = document.querySelector("canvas");
+    const Pincel = Pantalla.getContext("2d");
+    Pincel.fillStyle = "#eee";
+    Pincel.fillRect(0,0,600,400);
+
+    var x = 0, r = 10, xAleatorio, yAleatorio;
+
+    const DisenarCircusferencia = (x,y,r,color) =>{
+      Pincel.fillStyle = color;
+      Pincel.beginPath();
+      Pincel.arc(x,y,r,0,2*Math.PI);
+      Pincel.fill();
+    }
+
+    const LimpiarPantalla = () => {
+      Pincel.clearRect(0,0,600,400);
+    }
+
+    const DisenarObjetivo = (x,y) => {
+      DisenarCircusferencia(x,y,r+20,"red");
+      DisenarCircusferencia(x,y,r+10,"white");
+      DisenarCircusferencia(x,y,r,"red");
+    }
+
+    const sortearPosicion = (max) => {
+      return Math.round(Math.random()*max)
+    }
+
+    const ActualizarPantalla = () => {
+      LimpiarPantalla();
+      xAleatorio = sortearPosicion(600);
+      yAleatorio = sortearPosicion(400);
+      DisenarObjetivo(xAleatorio,yAleatorio)
+    }
+
+    const Disparar = (evento) =>{
+      let x = evento.pageX - Pantalla.offsetLeft;
+      let y = evento.pageY - Pantalla.offsetTop;
+      
+      if ((x < xAleatorio + r) && (x > xAleatorio - r) &&
+          (y < yAleatorio + r) && (y > yAleatorio - r))
+        {alert("Tiro Certero!")}
+      else{alert("Tiro Errado!")}
+    }
+
+    setInterval(ActualizarPantalla, 2000)
+    Pantalla.onclick = Disparar;
+    
+  </script>
+</body>
+</html>
