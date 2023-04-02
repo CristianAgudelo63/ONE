@@ -1,0 +1,14 @@
+/* Metodología BEM y Atomic Desing */
+
+@import url(./sobre-titulo.css) all;
+@import url(./sobre-descripcion.css) all;
+
+.sobre{text-align: center;}
+
+@media screen and (min-width:0) {
+  .sobre{padding: 2.5rem 1rem;}
+}
+
+@media screen and (min-width:768px) {
+  .sobre{padding: 2.5rem;}
+}

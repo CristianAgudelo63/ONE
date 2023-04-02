@@ -1,0 +1,33 @@
+/* Metodología BEM y Atomic Desing */
+
+@import url(./reseta-imagen.css) all;
+@import url(./receta.css) all;
+
+@import url(./contenido/recetas-contenido.css) all;
+@import url(./contenido/reseta-titulo.css) all;
+@import url(./contenido/reseta-descripcion.css) all;
+@import url(./contenido/reseta-boton.css) all;
+
+.recetas{
+  background-color: #dab997;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width:0){
+  .recetas{
+    padding: 5rem 0 0 1rem;
+  }
+}
+
+@media screen and (min-width:768px){
+  .recetas{
+    padding: 5rem 0 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:992px){
+  .recetas{
+    padding: 5rem 0 0 5rem;
+  }
+}

@@ -1,0 +1,11 @@
+/* Metodología BEM y Atomic Desing */
+
+@import url(./formateo/normalize.css) all;
+@import url(./formateo/reset.css) all;
+
+@import url(./cabecera/cabecera.css) all;
+@import url(./banner/banner.css) all;
+@import url(./sobre/sobre.css) all;
+@import url(./recetas/recetas.css) all;
+@import url(./quienes/quienes.css) all;
+@import url(./rodapie/rodapie.css) all;

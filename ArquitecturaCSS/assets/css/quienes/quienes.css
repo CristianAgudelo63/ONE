@@ -1,0 +1,10 @@
+/* Metodología BEM y Atomic Desing */
+
+@import url(./quienes-titulo.css) all;
+@import url(./quienes-descripcion.css) all;
+@import url(./personas.css) all;
+
+.quienes{
+  padding: 5rem;
+  text-align: center;
+}

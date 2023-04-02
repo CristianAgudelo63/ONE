@@ -1,0 +1,14 @@
+/* Metodología BEM y Atomic Desing */
+
+@import url(./rodapie-titulo.css);
+@import url(./rodapie-descripcion.css);
+@import url(./rodapie-item.css);
+@import url(./rodapie-lista.css);
+@import url(./rodapie-icon.css);
+
+.rodapie{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem 2rem 0;
+}

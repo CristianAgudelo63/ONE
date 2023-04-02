@@ -1,0 +1,8 @@
+/* Metodología BEM y Atomic Desing*/
+
+@import url(./banner-imagen.css);
+@import url(./banner-titulo.css);
+
+.banner{
+  position: relative;
+}
